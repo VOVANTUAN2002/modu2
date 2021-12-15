@@ -3,11 +3,12 @@ table {
     border-top-color: #ff0000;
     border-top-color: red;
     border-top-color: rgb(255, 0, 0);
-    width: 500px;
+    width: 100%
 }
 
 h2 {
-    background-attachment: ;
+    background-attachment: fixed;
+    color: #00000;
 }
 </style>
 <?php
@@ -62,8 +63,12 @@ function searchByDate($customer,$fromDate,$toDate){
 $fromDate = null;
 $toDate = null;
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
-    $fromDate = $_REQUEST["from"];
-    $toDate = $_REQUEST["to"];
+    if (isset($_REQUEST["from"] )){
+    $fromDate = $_REQUEST["from"];  
+}
+if (isset($_REQUEST["to"])){
+    $toDate = $_REQUEST['to'];
+}
 }
 $filteredCustomers = searchByDate($customerList, $fromDate, $toDate);
 ?>

@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     $Sencod = $_REQUEST["Sencod"];
 
     //lử lý 
-    switch ($Operator){
+    switch ($operator){
         case '+':
             echo $first + $Sencod;
             break;

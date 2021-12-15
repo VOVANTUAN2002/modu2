@@ -9,6 +9,5 @@
     echo "<br>";
     echo $a / $b;
  }
- 
-    calculate(5,0);
-   
+    calculate(5,5);
+?>

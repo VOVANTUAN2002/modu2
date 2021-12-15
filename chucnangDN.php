@@ -7,9 +7,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "<h3>Welcome <span style='color:red'>" .$username. "</span> to website</h3>";
     }else{
         echo "<h3><span stype='color:red'> login Error</span></h3>";
+
+echo 'username'. $_POST["username"];
+echo 'password' . $_POST["password"];
+
+if (!$username ||  !$password){
+echo 'vui long nhập đúng thông tin';
+exit;
     }
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <style type="text/css">
     .login{
         width: 270px;
-        margin:0;
+        margin :0       ;
         padding: 10px;
         border:1px #ccc solid;
     }

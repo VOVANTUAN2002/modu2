@@ -19,4 +19,4 @@
     <li><a href="#">Paris</a></li>
     <li><a href="#">Tokyo</a></li>
 </ul>
-<?php  include("danhsachKH.php");?>
+<?php include("danhsachKH.php");?>

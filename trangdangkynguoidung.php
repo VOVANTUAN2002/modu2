@@ -35,6 +35,7 @@ form input {
         Phone: <input type="text" name="phone" value="" placeholder=" Số điện thoại "><br></br>
 
         <input type="submit" name="dangky" value="Đăng Ký"></br>
+        
     </form>
 
 </body>
@@ -49,14 +50,12 @@ if(isset($_POST['dangky'])){
     $phone = ($_POST['phone']);
 
     if (!$username ||  !$email || !$phone ){
-        echo "Vui lòng nhập đầy đủ thông tin. <a href='javascript: history.go(-1)'>Trở lại</a>";
+        echo "Vui lòng nhập đầy đủ thông tin.
+        <a href='javascript: history.go(-1)'>Trở lại</a>";
         exit;
     }
 
-        echo "Tên đăng nhập: ", $_POST['username'],"<br/>";
-        echo "Email đăng nhập: ", $_POST['email'],"<br/>";
-        echo "Số điện thoại: ", $_POST['phone'],"<br/>";
+        echo "Tên đăng nhập: ", $_POST['username'],"</br>";
+        echo "Email đăng nhập: ", $_POST['email'],"</br>";
+        echo "Số điện thoại: ", $_POST['phone'],"</br>";
         }
-
-        
-        
